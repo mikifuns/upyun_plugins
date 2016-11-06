@@ -1,9 +1,9 @@
 # upyun_plugins
-wordpress upyun cdn plugins
+wordpress upyun cdn plugins (https ver.))
 
 === Upyun For Wordpress === 
 
-本插件为第三方提供，原作者cuelog，由于该插件长时间未维护，又拍云官网有更新，本人简单优化了下后台的配置界面。
+本插件为第三方提供，原作者cuelog,修改者monkey-wenjun，由于该插件不能满足https的需要，作者也长时间没更新，本人遍处理了下https的问题.现在为强制https。
 
 ### 视频教程
 https://techs.b0.upaiyun.com/videos/cdnpage/wordpress.html
