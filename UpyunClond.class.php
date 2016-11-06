@@ -281,7 +281,7 @@ class UpYunCloud {
 						$files = array_merge ( $files, $res );
 					}
 				} else {
-					$files [] = 'http://' . $this->option ['binding_url'] . $path . '/' . $ls ['name'];
+					$files [] = 'https://' . $this->option ['binding_url'] . $path . '/' . $ls ['name'];
 				}
 			}
 		}
