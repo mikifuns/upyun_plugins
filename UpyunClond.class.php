@@ -474,7 +474,7 @@ class UpYunCloud {
 					$count = count($files);
 					$err = array();
 					foreach ($files as $fs) {
-						$dfs = str_replace('http://', '', $fs);
+						$dfs = str_replace('https://', '', $fs);
 						$dfs = str_replace($this->option ['binding_url'], '', $dfs);
 						$res = $this->UPyun->deleteFile ( $dfs );
 						if($res === false) {
@@ -520,7 +520,7 @@ class UpYunCloud {
 				}
 			} else {
 				// 绑定域名
-				$this->option ['binding_url'] = str_replace ( 'http://', '', trim ( $_POST ['binding_url'], ' /' ) );
+				$this->option ['binding_url'] = str_replace ( 'https://', '', trim ( $_POST ['binding_url'], ' /' ) );
 				// 服务名
 				$this->option ['bucket_name'] = trim ( $_POST ['bucket_name'] );
 				// 用户名
@@ -533,7 +533,7 @@ class UpYunCloud {
 				$remote_upload_root = trim ( $_POST ['remote_upload_root'], ' /' );
 				$this->option ['remote_upload_root'] = empty ( $remote_upload_root ) ? '/' : '/' . $remote_upload_root;
 				// 文件根目录访问url
-				$this->option ['remote_upload_root_url'] = 'http://' . $this->option ['binding_url'] . rtrim( $this->option ['remote_upload_root'], '/' );
+				$this->option ['remote_upload_root_url'] = 'https://' . $this->option ['binding_url'] . rtrim( $this->option ['remote_upload_root'], '/' );
 				// 服务类型
 				$this->option ['is_normal'] = $_POST ['is_normal'] == 'Y' ? 'Y' : 'N';
 				// 是否上传后删除本地文件

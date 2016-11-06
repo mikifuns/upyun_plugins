@@ -215,7 +215,7 @@ class UpYun {
      */
     protected function _do_request($method, $path, $headers = NULL, $body= NULL, $file_handle= NULL) {/*{{{*/
         $uri = "/{$this->_bucketname}{$path}";
-        $ch = curl_init("http://{$this->endpoint}{$uri}");
+        $ch = curl_init("https://{$this->endpoint}{$uri}");
 
         $_headers = array('Expect:');
         if (!is_null($headers) && is_array($headers)){
